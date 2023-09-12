@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderContainer, Title, Navigation, SocialMedia } from './styles';
+import { HeaderContainer, Title, Navigation, ButtonContact } from './styles';
 
 import instagram from '../../assets/instagram.svg';
 import github from '../../assets/github.svg';
@@ -19,14 +19,17 @@ export function Header() {
           <li><a href="/fale-comigo">Fale comigo</a></li>
         </ul>
       </Navigation>
-      <SocialMedia>
+      <ButtonContact>
+        Contact Me
+      </ButtonContact>
+      {/* <SocialMedia>
         <ul>
             <li><a href="/"><img src={instagram} alt="Instagram"/></a></li>
             <li><a href="/"><img src={github} alt="GitHub"/></a></li>
             <li><a href="/"><img src={linkedin} alt="LinkedIn"/></a></li>
             <li><a href="/"><img src={twitter} alt="Twitter"/></a></li>
         </ul>
-      </SocialMedia>
+      </SocialMedia> */}
     </HeaderContainer>
   );
 }

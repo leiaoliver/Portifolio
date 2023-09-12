@@ -4,7 +4,7 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
 
-  background-color: #141920;
+  background-color: #F5FCFF;
   color: #b4b4b4;
   
   width: 100%;
