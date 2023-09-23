@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
-export const GobalStyle = createGlobalStyle` 
+export const GlobalStyle = createGlobalStyle` 
 :root {
 }
 
@@ -94,3 +94,19 @@ export const GobalStyle = createGlobalStyle`
     }
   }
 `;
+
+
+export const Container = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #F5FCFF;
+  color: #282938;
+  width: 100%;
+  height: 100vh;
+  padding: 0.2rem 5rem;
+  
+}
+
+`
+

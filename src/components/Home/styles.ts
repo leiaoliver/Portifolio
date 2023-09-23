@@ -1,34 +1,65 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
-  display: flex;
-  flex-direction: column;
+  > div {
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+    width: 790.67px;
 
-  background-color: #F5FCFF;
-  color: #b4b4b4;
   
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  .container {
-    max-width: 700px;
-  }
-
-  p {
-    font-size: 1.125rem;
-    letter-spacing: .2px;
-    line-height: 1.5;
+    h2 {
+      font-size: 159px;
+      letter-spacing: 0.2px;
+      line-height: 1.5;
+    }
   }
 `;
 
-
-export const ImagePerfil = styled.img``
+export const ImagePerfil = styled.img`
+  
+`;
 
 export const Title = styled.h2`
-    font-size: 2.25rem;
-    letter-spacing: .5px;
+  font-size: 50px;
+  letter-spacing: 0.5px;
+
+  
+  span {
+    color: #5E3BEE;
+  }
+`;
+
+export const Button = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 130px;
+  border: none;
+  border-radius: 5.33px;
+  background: #5E3BEE;
+  color: #fff;
+  cursor: pointer; 
+  margin-top: 20px;
+  transition: background 0.4s ease;
+
+
+  &:hover {
+    background: #3D269D;
+  }
+`;
+
+export const Image = styled.img`
+  width: 500px;
+  
+`;
+
+export const Paragrafo = styled.p`
+  width: 500px;
+  color: #1C1E53;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+
 `
