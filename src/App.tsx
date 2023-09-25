@@ -6,6 +6,7 @@ import { Home } from "../src/components/Home";
 import { Projects } from './components/Projects';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
+import { Footer } from './components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           {/* Adicione outras rotas conforme necessário */}
         </Routes>
+        <Footer/>
         {/* Remova a renderização dos componentes aqui se você desejar que eles sejam renderizados dentro das rotas */}
       </div>
       <GlobalStyle />
