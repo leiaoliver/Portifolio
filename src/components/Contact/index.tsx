@@ -7,13 +7,17 @@ export function Contact() {
     primeironome: '',
     segundonome: '',
     email: '',
-    telefone: '',
+    telefone: '', 
     mensagem: '',
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+
+    // Verifica se o valor é numérico antes de atualizar o estado
+    if (!isNaN(Number(value))) {
+      setFormData({ ...formData, [name]: value });
+    }
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -36,6 +40,7 @@ export function Contact() {
             name='nome'
             value={formData.primeironome}
             onChange={handleInputChange}
+            placeholder='Digite seu primeiro nome'
             required
           />
         </div>
@@ -47,6 +52,7 @@ export function Contact() {
             name='nome'
             value={formData.segundonome}
             onChange={handleInputChange}
+            placeholder='Digite seu segundo nome'
             required
           />
         </div>
@@ -58,41 +64,46 @@ export function Contact() {
             name='email'
             value={formData.email}
             onChange={handleInputChange}
+            placeholder='Digite seu email'
             required
           />
         </div>
         <div>
-          <label htmlFor='email'>Telefone:</label>
-          <input
-            type='email'
-            id='email'
-            name='email'
-            value={formData.telefone}
-            onChange={handleInputChange}
-            required
-          />
-        </div>
+        <label htmlFor='telefone'>Telefone:</label>
+        <input
+          type='number'
+          id='telefone'
+          name='telefone'
+          value={formData.telefone}
+          onChange={handleInputChange}
+          placeholder='Digite o telefone'
+          required
+        />
+      </div>
       </Content> 
 
       <Content2>
-        <div>
-          <label htmlFor='email'>Selecione o serviço:</label>
-          <input
-            type='email'
-            id='email'
-            name='email'
-            value={formData.email}
-            onChange={handleInputChange}
+      <div>
+          <label htmlFor='servico'>Selecione o serviço:</label>
+          <select
+            id='servico'
+            name='servico'
             required
-          />
+          >
+            <option value='opcao1'>Site Web (frontend - Banckend)</option>
+            <option value='opcao2'>Aplicativo Mobile (frontend - Banckend)</option>
+          </select>
         </div>
-        <div>
+
+
+        <div className='message'>
           <label htmlFor='mensagem'>Mensagem:</label>
           <textarea
             id='mensagem'
             name='mensagem'
             value={formData.mensagem}
             onChange={handleInputChange}
+            placeholder='Digite o sua mensagem'
             required
           />
         </div>
