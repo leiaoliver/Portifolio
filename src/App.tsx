@@ -1,29 +1,34 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { GlobalStyle } from './styles/global';
 import { Header } from "../src/components/Header";
-import { Home } from "../src/components/Home";
-import { Projects } from './components/Projects';
-import { About } from './components/About';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { Home } from './components/Home';
+import { About } from './components/About';
+import { Services } from './components/Services';
+import { Projects } from './components/Projects';
+import { Knowledge } from './components/Knowledge';
+import { Contact } from './components/Contact';
+import { SideBar } from './components/SideBar';
 
 function App() {
+
+
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          {/* Adicione outras rotas conforme necessário */}
-        </Routes>
-        <Footer/>
-        {/* Remova a renderização dos componentes aqui se você desejar que eles sejam renderizados dentro das rotas */}
-      </div>
+      
+        <Header />  
+       {/* <SideBar />  */}
+        <div className="content">
+          <Home id='home' />  
+          <About id='about'/>
+          <Services id="services"/>
+          <Projects id="projects"/>
+          <Knowledge id="knowledge"/>
+          <Contact id="contact"/>
+        </div>
+        <Footer />
+      
       <GlobalStyle />
     </Router>
   );

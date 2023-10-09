@@ -1,23 +1,32 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { Title, Form, Content, Content2 } from './styles'; // Importe o CSS corretamente
 import { Container } from '../../styles/global';
 
-export function Contact() {
+interface ContactProps {
+  id: string;
+}
+
+export function Contact({id}: ContactProps) {
   const [formData, setFormData] = useState({
     primeironome: '',
     segundonome: '',
     email: '',
-    telefone: '', 
+    telefone: '',
     mensagem: '',
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
     // Verifica se o valor é numérico antes de atualizar o estado
     if (!isNaN(Number(value))) {
       setFormData({ ...formData, [name]: value });
     }
+  };
+
+  const handleTextareaChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -27,7 +36,7 @@ export function Contact() {
   };
 
   return (
-    <Container id='contact'>
+    <Container id={id}>
       <Form onSubmit={handleSubmit}>
       <Title>Contato</Title>
       <p>Entre em contato para saber mais</p>
@@ -37,7 +46,7 @@ export function Contact() {
           <input
             type='text'
             id='nome'
-            name='nome'
+            name='primeironome'
             value={formData.primeironome}
             onChange={handleInputChange}
             placeholder='Digite seu primeiro nome'
@@ -49,7 +58,7 @@ export function Contact() {
           <input
             type='text'
             id='nome'
-            name='nome'
+            name='segundonome'
             value={formData.segundonome}
             onChange={handleInputChange}
             placeholder='Digite seu segundo nome'
@@ -71,7 +80,7 @@ export function Contact() {
         <div>
         <label htmlFor='telefone'>Telefone:</label>
         <input
-          type='number'
+          type='text'
           id='telefone'
           name='telefone'
           value={formData.telefone}
@@ -90,8 +99,8 @@ export function Contact() {
             name='servico'
             required
           >
-            <option value='opcao1'>Site Web (frontend - Banckend)</option>
-            <option value='opcao2'>Aplicativo Mobile (frontend - Banckend)</option>
+            <option value='opcao1'>Site Web (frontend - Backend)</option>
+            <option value='opcao2'>Aplicativo Mobile (frontend - Backend)</option>
           </select>
         </div>
 
@@ -102,8 +111,8 @@ export function Contact() {
             id='mensagem'
             name='mensagem'
             value={formData.mensagem}
-            onChange={handleInputChange}
-            placeholder='Digite o sua mensagem'
+            onChange={handleTextareaChange} // Use o manipulador de eventos correto para campos de área de texto
+            placeholder='Digite sua mensagem'
             required
           />
         </div>

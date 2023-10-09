@@ -2,14 +2,14 @@ import React from 'react'; // Make sure to import React
 import { Title } from './styles'; // Import the CSS file correctly
 import { Container } from '../../styles/global';
 
-interface ProjectsProps {
-  id: string;
+interface ServicesProps {
+    id: string;
 }
 
-export function Projects({id}: ProjectsProps) {
+export function Services({id}:ServicesProps) {
   return (
     <Container id={id}>
-       <Title>Projetos</Title>
+       <Title>Serviços</Title>
     </Container>
   );
 }

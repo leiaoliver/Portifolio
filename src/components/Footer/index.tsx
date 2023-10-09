@@ -4,8 +4,8 @@ import { Container } from '../../styles/global';
 
 export function Footer() {
   return (
-    <Container id='contact'>
-      <Content></Content>
+    <Container id='footer'>
+      <Content>Footer</Content>
       
       <Content className='line'></Content>
     </Container>

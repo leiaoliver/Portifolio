@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
+
 export const GlobalStyle = createGlobalStyle` 
 :root {
 }
@@ -11,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    font-size: 62.5%
+    font-size: 62.5%;
     @media (max-width: 1080px) {
       font-size: 93.75%; //15px
     }
@@ -28,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body, input, textarea, button {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Ubuntu', sans-serif; /* Adicione 'Ubuntu' como uma opção de fonte */
   }
 
   ul {
@@ -100,13 +101,10 @@ export const Container = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #F5FCFF;
+  background-color: #FFF;
   color: #282938;
   width: 100%;
   height: 100vh;
-  padding: 0.2rem 5rem;
-  
-}
-
+  padding: 0.2rem 7rem;
 `
 
