@@ -8,7 +8,7 @@ export const Content = styled.div`
     height: 350px;
     padding: 3rem 5rem;
     margin-left: 550px;
-
+    
     hr {
         margin-top: 1.5rem;
         opacity: 80%;
@@ -33,29 +33,57 @@ export const Content = styled.div`
             :nth-child(2),
             :nth-child(3) {
                 margin-right: 5rem;
-                filter: invert(100%); /* Inverte as cores da imagem para 100% */
                 width: 2.5rem;
                 height: 2.5rem;
                 cursor: pointer;
-                object-fit: cover; 
             }
 
             :nth-child(4) {
-                filter: invert(100%); /* Inverte as cores da imagem para 100% */
                 width: 2.5rem;
                 height: 2.5rem;
                 cursor: pointer;
             }
 
-            :nth-child(1):hover {
-                filter: hue-rotate(335deg); /* Rotação da cor para #E4405F */
+
+            .instagram {
+                transition: color 0.3s ease; /* Adicione uma transição suave para a cor do ícone */
+           }
+            .instagram:hover{
+                color: #bc2a8d;
             }
 
+            .linkedin {
+            transition: color 0.3s ease; /* Adicione uma transição suave para a cor do ícone */
+            }
+
+            .linkedin:hover {
+            color: #0077b5; /* Cor real da logo do LinkedIn para o hover */
+            }
+
+            .github {
+            transition: color 0.3s ease; /* Adicione uma transição suave para a cor do ícone */
+            }
+
+            .github:hover {
+            color: #333; /* Cor real da logo do GitHub para o hover */
+            }
+
+            .twitter {
+            transition: color 0.3s ease; /* Adicione uma transição suave para a cor do ícone */
+            }
+
+            .twitter:hover {
+            color: #1da1f2; /* Cor real da logo do Twitter para o hover */
+            }
+            
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
     }
 `
 
 export const Title = styled.h1`
-  font-family: "Gemunu Libre";
   font-size: 4rem;
   color: transparent; /* Torna o texto invisível */
   background-image: linear-gradient(to right, #5E3BEE, #FF6B6B); /* Gradiente de cores */

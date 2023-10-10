@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { HeaderContainer, Title, ButtonContact, Navigation } from './styles';
 import { Link } from 'react-scroll';
 
+import logo from '../../assets/logo.svg'
+
 export function Header() {
   const [isScrolling, setIsScrolling] = useState(false);
 
@@ -24,7 +26,7 @@ export function Header() {
 
   return (
     <HeaderContainer className={isScrolling ? 'scrolling' : ''}>
-      <Title>Léia</Title>
+      <img src={logo} className='logo'/>
       <Navigation>
         <ul>
         <li>

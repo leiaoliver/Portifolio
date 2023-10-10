@@ -16,6 +16,12 @@ export const HeaderContainer = styled.header`
   &.scrolling {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicione o box-shadow quando a classe "scrolling" estiver presente */
   } 
+
+  .logo {
+    width: 84px;
+    height: 80px;
+    color: linear-gradient(to right, #5E3BEE, #FF6B6B);
+  }
 `;
 
 export const Title = styled.h1`
@@ -46,7 +52,7 @@ export const Navigation = styled.nav`
 
   ul {
     display: flex;
-    gap: 1rem;
+    gap: 2.5rem;
     justify-content: center;
   }
 
@@ -72,7 +78,8 @@ export const Navigation = styled.nav`
     bottom: -0.5rem; 
     left: 0;
     width: 100%; 
-    height: 0.1rem; 
+    height: 0.25rem; 
+    border-radius: 1rem;
     background-color: #5E3BEE;
     animation: ${fadeInBorder} 0.4s ease forwards; 
   }
