@@ -1,8 +1,9 @@
-import React from 'react';
+import React , { useState, useEffect }from 'react';
 import foto from "../../assets/leia.png";
 import { Container } from "../../styles/global";
 import { Button, Title, Image, Paragrafo, Content} from './styles';
 import { FiDownload } from 'react-icons/fi';
+import { Element } from 'react-scroll';
 
 interface HomeProps {
   id: string;

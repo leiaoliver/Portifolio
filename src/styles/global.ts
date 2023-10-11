@@ -106,5 +106,17 @@ export const Container = styled.section`
   width: 100%;
   height: 100vh;
   padding: 0.2rem 7rem;
+
+  .animated-slide {
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animated-slide.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 `
 
