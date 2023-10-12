@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0.2rem 7rem;
-  background: white; 
+  background: #000; 
   z-index: 100; 
 
   box-shadow: none; /* Remova o box-shadow por padrão */
@@ -16,22 +16,6 @@ export const HeaderContainer = styled.header`
   &.scrolling {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicione o box-shadow quando a classe "scrolling" estiver presente */
   } 
-
-  .logo {
-    width: 84px;
-    height: 80px;
-    color: linear-gradient(to right, #5E3BEE, #FF6B6B);
-  }
-`;
-
-export const Title = styled.h1`
-  font-family: "Gemunu Libre";
-  color: #1C1E53;
-  font-size: 4rem;
-
-  position: relative;
-  display: inline-block;
-  user-select: none; 
 `;
 
 const fadeInBorder = keyframes`
@@ -45,7 +29,7 @@ const fadeInBorder = keyframes`
 
 export const Navigation = styled.nav`
   position: relative;
-  color: #1C1E53;
+  color: #fff;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 150%; 
@@ -63,7 +47,7 @@ export const Navigation = styled.nav`
   }
 
   a {
-    color: #1C1E53;
+    color: #fff;
   
     text-decoration: none;
     position: relative; 
@@ -92,6 +76,7 @@ export const Navigation = styled.nav`
 export const ButtonContact = styled.button`
   font-size: 1.3rem;
   border-radius: 30px;
+  border: none;
   border: 1.333px solid #5E3BEE;
   color: #5E3BEE;
   width: 10rem;
@@ -100,8 +85,35 @@ export const ButtonContact = styled.button`
 
   &:hover {
     background: #5E3BEE;
-    border: 1.333px solid #fff;
     color: #fff;
   }
 `;
 
+export const Title = styled.h1`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Tornar o h1 position: absolute */
+  top: 0;
+  left: 0;
+  background-color: #000;
+  font-size: 45px;
+  color: #fff;
+  mix-blend-mode: multiply;
+
+  font-family: 'Poppins', sans-serif;
+`;
+
+export const Video = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
+export const Section = styled.section`
+  width: 150px;
+  height: 100%; /* Ajuste a altura conforme necessário */
+  position: relative; /* Defina o elemento pai como posição relativa */
+`;

@@ -18,7 +18,7 @@ export function About({ id }: AboutProps) {
       </ImageContainer>
 
       <Content>
-        <Title>About Me</Title>
+        <Title>Sobre mim</Title>
         <p>
           Sou apaixonada por Tecnologia e Programação, sou formada em técnico de informática
           para web pela ETEC de Rio Grande da Serra e atualmente estou cursando Análise e

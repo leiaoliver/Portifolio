@@ -37,17 +37,97 @@ const slideContent = [
           </span>
           <GithubButton>Github</GithubButton>
         </Card>
+
+        <Card>
+          <div>
+            <Image src={image} />
+          </div>
+          <span>
+            <h2>Ig.news</h2>
+            <p>Lage Paging desenvolvida junto à Rocketseat</p>
+          </span>
+          <GithubButton>Github</GithubButton>
+        </Card>
       </CardContainer>
     ),
   },
   {
     id: 2,
-    content: <CardContainer></CardContainer>,
+    content: (
+      <CardContainer>
+      <Card>
+        <div>
+          <Image src={image} />
+        </div>
+        <span>
+          <h2>news</h2>
+          <p>Lage Paging desenvolvida junto à Rocketseat</p>
+        </span>
+        <GithubButton>Github</GithubButton>
+      </Card>
+
+      <Card>
+        <div>
+          <Image src={image} />
+        </div>
+        <span>
+          <h2>Ig.news</h2>
+          <p>Lage Paging desenvolvida junto à Rocketseat</p>
+        </span>
+        <GithubButton>Github</GithubButton>
+      </Card>
+
+      <Card>
+        <div>
+          <Image src={image} />
+        </div>
+        <span>
+          <h2>Ig.news</h2>
+          <p>Lage Paging desenvolvida junto à Rocketseat</p>
+        </span>
+        <GithubButton>Github</GithubButton>
+      </Card>
+    </CardContainer>
+    ),
   },
   {
     id: 3,
-    content: <CardContainer></CardContainer>,
-  },
+    content: (
+      <CardContainer>
+      <Card>
+        <div>
+          <Image src={image} />
+        </div>
+        <span>
+          <h2>Ig.news</h2>
+          <p>Lage Paging desenvolvida junto à Rocketseat</p>
+        </span>
+        <GithubButton>Github</GithubButton>
+      </Card>
+
+      <Card>
+        <div>
+          <Image src={image} />
+        </div>
+        <span>
+          <h2>Ig.news</h2>
+          <p>Lage Paging desenvolvida junto à Rocketseat</p>
+        </span>
+        <GithubButton>Github</GithubButton>
+      </Card>
+
+      <Card>
+        <div>
+          <Image src={image} />
+        </div>
+        <span>
+          <h2>Ig.news</h2>
+          <p>Lage Paging desenvolvida junto à Rocketseat</p>
+        </span>
+        <GithubButton>Github</GithubButton>
+      </Card>
+    </CardContainer>
+    ),  },
 ];
 
 interface ServicesProps {

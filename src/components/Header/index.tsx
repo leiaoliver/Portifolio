@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { HeaderContainer, Title, ButtonContact, Navigation } from './styles';
+import { HeaderContainer, Section, ButtonContact, Navigation, Title, Video } from './styles';
 import { Link } from 'react-scroll';
 
-import logo from '../../assets/logo.svg'
+
+// @ts-ignore
+import video from '../../assets/video.mp4';
+
 
 export function Header() {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -26,7 +29,10 @@ export function Header() {
 
   return (
     <HeaderContainer className={isScrolling ? 'scrolling' : ''}>
-      <img src={logo} className='logo'/>
+         <Section>
+          <Video src={video} autoPlay loop muted />
+          <Title>Léia</Title>
+       </Section>
       <Navigation>
         <ul>
         <li>

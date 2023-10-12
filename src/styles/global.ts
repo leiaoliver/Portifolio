@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body, input, textarea, button {
-    font-family: 'Roboto', 'Ubuntu', sans-serif; /* Adicione 'Ubuntu' como uma opção de fonte */
+    font-family: 'Poppins', 'Ubuntu', sans-serif; /* Adicione 'Ubuntu' como uma opção de fonte */
   }
 
   ul {

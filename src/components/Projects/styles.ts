@@ -26,7 +26,7 @@ export const Content = styled.div`
     justify-content: center;
     gap: 5rem;
     width: 100%;
-    overflow: hidden;
+  
 
     &.next {
         animation: ${slideIn} 0.5s forwards;
@@ -38,11 +38,9 @@ export const Content = styled.div`
 `;
 
 export const CardContainer = styled.div`
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(2, auto); 
+    display: flex;
     width: 100%;
-    gap: 5rem;
+    gap: 3rem;
 `;
 
 export const Card = styled.div`
@@ -60,7 +58,7 @@ export const Card = styled.div`
         justify-content: center;
         background: #d0d0d0;
         border-radius: 1rem;
-        position: relative; /* Adicione esta linha */
+        position: relative; 
         width: 100%;
         height: 200px;
         left: 0;
@@ -68,10 +66,9 @@ export const Card = styled.div`
     }
 
     span {
-        bottom: 10rem;
-
         h2 {
             font-size: 2.5rem;
+            margin-top: 0.50rem;
         }
 
         p {
@@ -100,6 +97,7 @@ export const Button = styled.button`
 
 export const GithubButton = styled.button`
     background-image: linear-gradient(to right, #5E3BEE, #FF6B6B);
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,8 +105,7 @@ export const GithubButton = styled.button`
     height: 3.5rem;
     padding: 1rem;
     border: none;
-    border-radius: 5rem;
-    bottom: 3rem;
+    border-radius: 3.5rem;
 
     font-size: 1.5rem;
 `;
